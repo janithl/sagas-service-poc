@@ -1,7 +1,7 @@
 /* eslint no-console: ["error", { allow: ["log", "error"] }] */
 
-const log = message => console.log(message);
+const log = (...messages) => console.log(...messages);
 
-const error = errorMessage => console.error(errorMessage);
+const error = (...messages) => console.error(...messages);
 
 export default { log, error };
