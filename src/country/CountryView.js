@@ -1,5 +1,6 @@
 import React from "react";
 
+import logger from "../common/logger";
 import CountryService from "./CountryService";
 
 class CountryView extends React.Component {
@@ -14,7 +15,7 @@ class CountryView extends React.Component {
           this.setState({ fetching: false, country: json });
         })
         .catch(error => {
-          console.error(error);
+          logger.error(error);
           this.setState({ fetching: false });
         })
     );

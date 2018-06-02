@@ -1,12 +1,14 @@
+import logger from "./logger";
+
 const BASE_URL = "https://restcountries.eu/rest/v2";
 
 const onSuccessDefault = response => {
-  console.log("got response");
+  logger.log("got response");
   return response.json();
 };
 
 const onErrorDefault = error => {
-  console.error("response error", error);
+  logger.error("response error", error);
   return error;
 };
 
@@ -17,7 +19,7 @@ const request = (
   options = {}
 ) => {
   const url = [BASE_URL, endpoint].join("/");
-  console.log("fetching request w/ ", url, options);
+  logger.log("fetching request w/ ", url, options);
   return fetch(url, options)
     .then(onSuccess)
     .catch(onError);
