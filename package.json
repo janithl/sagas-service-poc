@@ -1,5 +1,5 @@
 {
-  "name": "service-poc",
+  "name": "sagas-service-poc",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
