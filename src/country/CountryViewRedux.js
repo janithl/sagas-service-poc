@@ -31,9 +31,9 @@ CountryViewRedux.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  code: state.code,
-  fetching: state.fetching,
-  country: state.country
+  code: state.country.code,
+  fetching: state.country.fetching,
+  country: state.country.country
 });
 
 const mapDispatchToProps = dispatch => ({
